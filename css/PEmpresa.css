@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f5f6fa;
+    color: #1E417B;
+}
+hr {
+    color: #0066D5;
+    background-color: #0066D5;
+    border: 1px solid #0066D5;
+    margin: 10px 5px;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1E417B;
+    padding: 10px 20px;
+    color: white;
+}
+
+.back-btn {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.brand-name {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: white;
+}
+
+.btn-editar {
+    background-color: white;
+    color: #1E417B;
+    border: 1px solid #1E417B;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.perfil-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.perfil-left {
+    width: 260px;
+    text-align: center;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.perfil-foto {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 10%;
+    object-fit: cover;
+}
+
+.link-claro {
+    
+    width: 80%;
+    padding-top: 40px;
+    margin-top: 100px;
+    background-color: #0066D5;
+    color: white;
+    padding: 6px 6px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+
+.perfil-right {
+    flex: 2 1 500px;
+    padding: 10px;
+}
+
+.perfil-right section ul {
+    list-style-type: none;
+    /* Elimina los puntos */
+    padding: 0;
+    /* Elimina el espaciado interno */
+    margin: 0;
+}
+
+.perfil-header h2 {
+    margin: 0;
+    color: #1E417B;
+}
+
+.titulo {
+    font-style: italic;
+    color: #555;
+    margin: 1px;
+}
+
+section h3 {
+    color: #1E417B;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.contenedor-tabla{
+    align-items: center;
+    padding: 10px 20px;
+
+}
+.contenedor-tabla h3{
+    font-size: 30px;
+}
+.tabla-ofertas {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.tabla-ofertas th,
+.tabla-ofertas td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+.tabla-ofertas th {
+    background-color: #1E417B;
+    color: white;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .perfil-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .perfil-right {
+        text-align: center;
+    }
+
+    .tabla-ofertas th,
+    .tabla-ofertas td {
+        font-size: 14px;
+    }
+}
