@@ -1,0 +1,474 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #eef3fb;
+    color: #1b2d56;
+}
+
+header {
+    background: #ffffffee;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    border-bottom: 1px solid rgba(0, 102, 213, 0.12);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+}
+
+.brand img {
+    width: 52px;
+    height: auto;
+}
+
+.brand-name {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #0f2b5d;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.menu a {
+    color: #1e417b;
+    text-decoration: none;
+    font-size: 0.96rem;
+    font-weight: 700;
+    transition: color 0.2s ease;
+}
+
+.menu a:hover {
+    color: #0050af;
+}
+
+.cta {
+    background: #0066d5;
+    color: #fff;
+    padding: 0.85rem 1.3rem;
+    border-radius: 999px;
+}
+
+hr {
+    border: none;
+    height: 4px;
+    background: #0066d5;
+    margin: 0;
+}
+
+.fondo-seccion {
+    position: relative;
+    padding: 4.5rem 1rem 4rem;
+    background-image: url(/imgn/fondoDifuminado.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.fondo-seccion::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(7, 35, 85, 0.55);
+}
+
+.contenido {
+    position: relative;
+    z-index: 1;
+    max-width: 1080px;
+    margin: 0 auto;
+    text-align: center;
+    color: #f5f8ff;
+}
+
+.contenido h1 {
+    font-size: clamp(2.5rem, 4vw, 4.4rem);
+    line-height: 1.02;
+    margin-bottom: 0.75rem;
+}
+
+.contenido h3 {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-weight: 400;
+    margin-bottom: 2rem;
+    color: rgba(246, 249, 255, 0.92);
+}
+
+.form-busqueda {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(180px, 1fr));
+    gap: 1rem;
+    justify-items: center;
+    align-items: stretch;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.buscador-select {
+    width: 100%;
+    min-height: 52px;
+    padding: 0 1rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    background: #ffffff;
+    color: #1b2d56;
+    font-size: 1rem;
+    outline: none;
+}
+
+.boton-select {
+    width: 72px;
+    min-height: 52px;
+    border-radius: 999px;
+    border: none;
+    background: #0066d5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.boton-select img {
+    width: 24px;
+    height: auto;
+    filter: invert(1);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem 4rem;
+}
+
+.Content-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+    gap: 1.75rem;
+    margin-top: -4rem;
+    position: relative;
+    z-index: 2;
+}
+
+.cards {
+    position: relative;
+    background: linear-gradient(135deg, #0f3f90 0%, #1f5aaa 100%);
+    border-radius: 28px;
+    padding: 2rem;
+    
+    box-shadow: 0 22px 48px rgba(15, 43, 93, 0.18);
+    overflow: hidden;
+    color: #fff;
+}
+
+.Imagen {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 96px;
+    max-width: 30%;
+}
+
+.card-title {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.card-text {
+    font-size: 1rem;
+    opacity: 0.9;
+    line-height: 1.7;
+}
+
+.btn1 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.7rem;
+    padding: 0.95rem 1.6rem;
+    border-radius: 999px;
+    background: #0077f5;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn1:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.18);
+}
+
+.section-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 1.75rem;
+    margin-top: 2rem;
+}
+
+.recientes,
+.Empresas {
+    background: #e7eefc;
+    border-radius: 28px;
+    padding: 1.75rem;
+}
+
+.section-header h2 {
+    margin: 0 0 1rem;
+    font-size: 1.75rem;
+    color: #0f2b5d;
+}
+
+.ofertasRecientes {
+    display: grid;
+    gap: 1rem;
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 102, 213, 0.18);
+    border-radius: 28px;
+    padding: 1.75rem;
+    display: grid;
+    gap: 1rem;
+    box-shadow: 0 18px 40px rgba(33, 87, 166, 0.08);
+}
+
+.card-body {
+    display: grid;
+    gap: 1rem;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.card-titles {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #153766;
+}
+
+.job-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    color: #4a5d7a;
+    font-size: 0.98rem;
+}
+
+.job-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.job-meta img {
+    width: 18px;
+    height: auto;
+}
+
+.btn-action {
+    padding: 0.7rem 1.4rem;
+    border-radius: 999px;
+    border: 1px solid #1e417b;
+    color: #1e417b;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.2s ease;
+    background: #f8fbff;
+}
+
+.btn-action:hover {
+    background: #1e417b;
+    color: #ffffff;
+}
+
+.btn-action:hover {
+    background: #1e417b;
+    color: #fff;
+}
+
+.botonVer,
+.btn-VerMDestacadas,
+.leerNos {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.95rem 1.6rem;
+    border-radius: 999px;
+    background: #0066d5;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    margin-top: 1.25rem;
+    font-weight: 700;
+}
+
+.EmpresasDestacadas {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.cardlogos {
+    background: #fff;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 102, 213, 0.16);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 110px;
+}
+
+.cardlogos img {
+    max-width: 140px;
+    height: auto;
+    object-fit: contain;
+}
+
+.fondo-seccion2 {
+    position: relative;
+    margin-top: 2rem;
+    border-radius: 28px;
+    background-image: url(/imgn/fondoNosotros.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    min-height: 420px;
+}
+
+.fondo-seccion2::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 33, 82, 0.55);
+}
+
+.sobreN {
+    position: relative;
+    z-index: 1;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+}
+
+.cardNos {
+    max-width: 560px;
+    background: #ffffff;
+    border-radius: 28px;
+    padding: 2rem;
+    box-shadow: 0 22px 50px rgba(0, 0, 0, 0.12);
+}
+
+.cardNos h2 {
+    margin-top: 0;
+    font-size: 2rem;
+    color: #0f2b5d;
+}
+
+.cardNos p {
+    margin: 1.25rem 0;
+    color: #55637f;
+    line-height: 1.85;
+    font-size: 1rem;
+}
+
+footer {
+    background: #ffffff;
+    padding: 2rem 1rem 3rem;
+}
+
+.footer-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.footer-inner img {
+    width: 120px;
+    height: auto;
+}
+
+.footer-text p {
+    margin: 0.35rem 0;
+    color: #5a6c90;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 1024px) {
+    .section-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .EmpresasDestacadas {
+        grid-template-columns: repeat(3, minmax(120px, 1fr));
+    }
+}
+
+@media (max-width: 840px) {
+    .Content-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .form-busqueda {
+        grid-template-columns: 1fr;
+    }
+
+    .menu {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 640px) {
+    .brand-name {
+        font-size: 1rem;
+    }
+
+    .menu {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .cards {
+        min-height: auto;
+    }
+
+    .EmpresasDestacadas {
+        grid-template-columns: 1fr;
+    }
+}
